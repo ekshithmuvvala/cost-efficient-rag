@@ -1,0 +1,21 @@
+[
+  {
+    "question": "REPLACE ME: a question your documents can actually answer",
+    "ground_truth_answer": "REPLACE ME: the correct answer, in your own words",
+    "relevant_chunk_ids": [
+      "REPLACE ME: run /ingest first, then look up the real chunk id(s) that contain the answer"
+    ]
+  },
+  {
+    "question": "REPLACE ME: a second real question",
+    "ground_truth_answer": "REPLACE ME",
+    "relevant_chunk_ids": [
+      "REPLACE ME"
+    ]
+  },
+  {
+    "question": "REPLACE ME: a question your documents CANNOT answer (to test the fallback)",
+    "ground_truth_answer": "I do not have sufficient information in the provided context to answer this question.",
+    "relevant_chunk_ids": []
+  }
+]

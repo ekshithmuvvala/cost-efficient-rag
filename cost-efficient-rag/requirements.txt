@@ -1,0 +1,32 @@
+# ============================================================
+# requirements.txt
+# This file lists every Python package the project depends on.
+# Install them all at once with:  pip install -r requirements.txt
+# ============================================================
+
+# --- Web Framework & Interface ---
+fastapi>=0.100.0          # Lets us expose /ingest and /query as HTTP endpoints
+uvicorn>=0.22.0            # The server that actually runs our FastAPI app
+pydantic>=2.0               # Used for config loading and request/response validation
+pydantic-settings>=2.0    # Lets Pydantic read settings from a .env file automatically
+
+# --- Document Ingestion & Text Processing ---
+pypdf>=3.10.0                 # Reads text out of PDF files
+beautifulsoup4>=4.12.0    # Reads text out of HTML files
+markdown>=3.4                # Converts Markdown files to plain text
+
+# --- Vector Store & Embeddings ---
+lancedb>=0.4.0                       # Our embedded (no-server-needed) vector database
+sentence-transformers>=2.2.2   # Turns text into numeric vectors (embeddings), for free, locally
+pyarrow>=12.0.0                      # LanceDB uses this under the hood to store data on disk
+
+# --- LLM Integration ---
+openai>=1.0.0     # Used to call an LLM to generate answers (and to judge answer quality)
+
+# --- Evaluation & Metrics ---
+pandas>=2.0.0        # Used to build and view result tables
+numpy>=1.24.0        # Used for numeric metric calculations (nDCG, etc.)
+
+# --- Utilities & Config ---
+python-dotenv>=1.0.0   # Loads secrets/config out of a .env file
+loguru>=0.7.0                # A friendlier version of Python's built-in logging
