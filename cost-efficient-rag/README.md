@@ -1,44 +1,5 @@
 # Cost-Efficient RAG Application
 
-A Retrieval-Augmented Generation (RAG) question-answering service built on
-**LanceDB**, an embedded, disk-based vector store — chosen instead of a
-managed cloud vector database (e.g. Pinecone) because it has **zero idle
-compute cost**: it runs as files on your own disk, with no always-on pod
-billed monthly whether or not you're querying it. You only pay for the
-disk space the vectors actually occupy.
-
----
-
-## 0. Zero-Knowledge Setup (do this once)
-
-You need Python 3.10+ installed. Check with:
-
-```bash
-python3 --version
-```
-
-Then, from inside this project folder:
-
-```bash
-# 1. Create an isolated Python environment just for this project
-python3 -m venv venv
-
-# 2. Activate it (you'll need to run this every time you open a new terminal)
-source venv/bin/activate          # Windows (PowerShell): venv\Scripts\activate
-
-# 3. Install every package the project needs
-pip install -r requirements.txt
-
-# 4. Create your real secrets file from the template
-cp .env.example .env
-```
-
-Now open `.env` in any text editor and paste your OpenAI API key in place
-of `your_openai_api_key_here`. (Get a key at
-https://platform.openai.com/api-keys — you'll need billing enabled on
-your OpenAI account.)
-
----
 
 ## 1. Run the Server
 
